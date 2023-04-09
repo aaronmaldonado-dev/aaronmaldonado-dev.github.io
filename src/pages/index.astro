@@ -1,15 +1,84 @@
 ---
+import "@fontsource/frank-ruhl-libre";
+import "@fontsource/source-sans-pro";
+import Header from "../astro-components/Header.astro";
+import Spheres from "../components/Spheres";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <div class="p-4 md:p-0"><Header /></div>
+    <div class="flex flex-col-reverse gap-4 md:flex-row px-4">
+      <main class="max-w-3xl pb-4 md:py-4">
+        <Header desktopVariant={true} />
+        <section class="md:mt-4 px-8 py-6 rounded-lg  bg-sky-50">
+          <h1
+            class="font-serif text-2xl sm:text-4xl md:text-6xl font-black leading-none mb-12 uppercase"
+          >
+            <span class="text-sky-950">From<br /> Design to</span><br /> <span class="text-sky-600">Development</span>
+          </h1>
+          <p class="mb-4 text-xl text-blue-950">
+            I'm a Front-End developer & UX Engineer with 15+ years of industry
+            experience working for companies in Mexico and the United States.
+          </p>
+          <p class="mb-4 text-xl text-blue-950">
+            Studying Engineering and Graphic Design gave me a holistic approach
+            to my professional duties. This has enabled me to bridge the gap
+            between technical and creative teams effectively.
+          </p>
+          <p class="mb-4 text-xl text-blue-950">
+            I know the issues of transforming an idea into reality, and I can
+            help you to materialize projects in the digital world, keeping them
+            creative, user-centered, and adjusted to the metrics and goals of
+            your business.
+          </p>
+          <hr class="my-8 border-blue-300" />
+          <p class="mb-4 text-xl text-blue-950">
+            Throughout my career, I've collaborated with amazing companies like:
+          </p>
+          <p class="mb-4 text-xl text-blue-950">
+            Encora, Softtek, HON, Maritz Motivation, Bacardi, Absolut, Nestlé,
+            Lilly Icos, Siegfried Rhein, GSK, Grunenthal, Tequila Cazadores,
+            Editorial Santillana, Medix, and many more.
+          </p>
+          <hr class="my-8 border-blue-300" />
+          <h3 class="text-2xl mb-4 font-bold font-serif uppercase tracking-wide text-sky-950">
+            My Skillset
+          </h3>
+          <p class="mb-4 text-xl text-blue-950">
+            Front-end development, creative coding, UI/UX design, user-centered
+            design, wireframing & prototyping, illustration, lettering, journey
+            mapping, information architecture, marketing, analytics, and
+            interdisciplinary collaboration.
+          </p>
+          <hr class="my-8 border-blue-300" />
+          <h3 class="text-2xl mb-4 font-bold font-serif uppercase tracking-wide text-sky-950">
+            My Toolset
+          </h3>
+          <p class="mb-4 text-xl text-blue-950">
+            HTML, CSS, JavaScript, React, NodeJS, PHP, WordPress, NextJS,
+            TailwindCSS, SASS, LESS, VS Code, BrowserStack, Docker, WP Engine,
+            GIT, LocalWP, Screaming Frog, AB Tasty.
+          </p>
+          <p class="mb-4 text-xl text-blue-950">
+            Figma, Procreate, Affinity Designer, Affinity Photo, Affinity
+            Publisher, Adobe Illustrator, Adobe Photoshop, Adobe After Effects
+            (basics), Pre-Sonus Studio One, Blender 3D.
+          </p>
+        </section>
+      </main>
+      <aside
+        class="cursor-grab overflow-hidden rounded-lg md:flex-grow md:sticky md:top-4 md:self-start md:h-[calc(100vh-(theme(spacing.4))*2)]"
+      >
+        <Spheres client:load />
+      </aside>
+    </div>
+  </body>
 </html>
