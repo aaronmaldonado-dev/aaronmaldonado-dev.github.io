@@ -2,7 +2,6 @@ import {
   OrbitControls,
   Environment,
   OrthographicCamera,
-  PerspectiveCamera,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState } from "react";
