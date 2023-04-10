@@ -11,10 +11,10 @@ import Spheres from "../components/Spheres";
   <head>
     <GoogleAnalytics />
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Aarón Maldonado - Front-End Developer & UX Engineer</title>
   </head>
   <body>
     <div class="p-4 md:p-0"><Header /></div>
@@ -85,7 +85,7 @@ import Spheres from "../components/Spheres";
       <aside
         class="cursor-grab overflow-hidden rounded-lg md:flex-grow md:sticky md:top-4 md:self-start md:h-[calc(100vh-(theme(spacing.4))*2)]"
       >
-        <Spheres client:load />
+        <Spheres client:only="react" />
       </aside>
     </div>
   </body>

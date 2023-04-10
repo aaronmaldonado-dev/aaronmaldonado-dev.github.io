@@ -5,31 +5,32 @@ const getRandomArbitrary = (min, max) => Math.random() * (max - min) + min;
 
 const animationTime = 0.15;
 
+gsap.registerEffect({
+  name: "sphereScaleAnimation",
+  effect: (targets, config) => {
+    return gsap.fromTo(
+      targets,
+      {
+        x: config.sphereProps.scale,
+        y: config.sphereProps.scale,
+        z: config.sphereProps.scale,
+      },
+      {
+        ease: "power2.inOut",
+        duration: 0.25,
+        yoyo: true,
+        repeat: 1,
+        x: config.scaleFactor * config.sphereProps.scale,
+        y: config.scaleFactor * config.sphereProps.scale,
+        z: config.scaleFactor * config.sphereProps.scale,
+      }
+    );
+  },
+  defaults: { duration: animationTime },
+  extendTimeline: true,
+});
+
 export const Sphere = ({ color }) => {
-  gsap.registerEffect({
-    name: "sphereScaleAnimation",
-    effect: (targets, config) => {
-      return gsap.fromTo(
-        targets,
-        {
-          x: config.sphereProps.scale,
-          y: config.sphereProps.scale,
-          z: config.sphereProps.scale,
-        },
-        {
-          ease: "power2.inOut",
-          duration: 0.25,
-          yoyo: true,
-          repeat: 1,
-          x: config.scaleFactor * config.sphereProps.scale,
-          y: config.scaleFactor * config.sphereProps.scale,
-          z: config.scaleFactor * config.sphereProps.scale,
-        }
-      );
-    },
-    defaults: { duration: animationTime },
-    extendTimeline: true,
-  });
 
   const [sphereTimeline, setSphereTimeline] = useState(null);
 
