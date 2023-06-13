@@ -7,6 +7,6 @@ import partytown from "@astrojs/partytown";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind(), partytown()],
-  site: 'https://sekamdex.github.io',
+  site: 'https://aaronmaldonado-dev.github.io',
   base: '/'
 });
