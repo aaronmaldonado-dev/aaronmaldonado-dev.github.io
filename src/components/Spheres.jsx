@@ -1,6 +1,5 @@
 import {
   OrbitControls,
-  Environment,
   OrthographicCamera,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -28,7 +27,6 @@ export default function Spheres() {
         <ambientLight intensity={0.05} />
         <Suspense fallback={null}>
           {renderSpheres(count)}
-          <Environment preset="sunset" />
         </Suspense>
         <OrbitControls enablePan={false} enableZoom={false} autoRotate={true} />
       </Canvas>
